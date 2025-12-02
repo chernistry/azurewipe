@@ -1,0 +1,8 @@
+azure-identity>=1.15.0
+azure-mgmt-resource>=23.0.0
+azure-mgmt-compute>=30.0.0
+azure-mgmt-network>=25.0.0
+azure-mgmt-storage>=21.0.0
+azure-mgmt-resourcegraph>=8.0.0
+PyYAML>=6.0
+textual>=0.85.0

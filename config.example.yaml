@@ -1,0 +1,46 @@
+# AzureWipe Configuration Example
+
+# Subscriptions to clean (list or "all")
+subscriptions:
+  - all  # or specific subscription IDs
+
+# Resource groups to clean (supports wildcards)
+resource_groups:
+  - dev-*
+  - test-*
+  - sandbox-*
+  # - all  # uncomment to clean all RGs
+
+# Resource types to clean
+resource_types:
+  - vm
+  - disk
+  - nic
+  - publicip
+  - nsg
+  # - all
+
+# Tag-based filtering
+tag_filters:
+  include:
+    Environment:
+      - dev
+      - test
+      - sandbox
+  exclude:
+    DoNotDelete:
+      - "true"
+    azurewipe:protect:
+      - "true"
+
+# Name patterns to exclude
+exclude_patterns:
+  - "prod-*"
+  - "critical-*"
+
+# Safety settings
+dry_run: true
+
+# Logging
+json_logs: false
+verbosity: 1
